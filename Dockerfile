@@ -4,7 +4,9 @@ RUN apt-get clean && apt-get update &&  \
     apt-get install -y --no-install-recommends apt-utils && \
     apt-get -y install git &&  \
     apt-get install -y build-essential && \
-    apt-get install -my wget gnupg
+    apt-get install -my wget gnupg && \
+    apt-get install -y libxslt-dev && \
+    docker-php-ext-install xsl
 
 COPY . /omp
 WORKDIR /omp
