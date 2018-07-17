@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -d -p 8000:8000 unq/omp
+docker run -d --name omp --rm -p 8000:8000 unq/omp
